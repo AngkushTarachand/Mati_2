@@ -1,0 +1,62 @@
+{% extends "dashboard.html"  %}
+{%  block style %}
+    <link rel="stylesheet" href="{{url_for('static', filename='dashboard-content.css')}}">
+{% endblock %}
+{% block body %}
+    {{ super() }}
+    {% block section %}
+            <div class="sub-main">
+                <div class="content">
+                    <div class="weather-today">
+
+                            <div class="w-container">
+                                <i class='bx bxs-calendar-event'></i>
+                                {{today_date}}
+                            </div>
+                            <div class="w-container">
+                                <i class='bx bxs-thermometer' ></i>
+                                {{average_temperature}} ℃
+                            </div>
+                            <div class="w-container">
+                                <i class='bx bx-sun' ></i>
+                                {{condition_weather}}
+                            </div>
+                            <div class="w-container">
+                                <i class='bx bx-cloud-rain' ></i>
+                                {{amount_rainfall}} mm
+                            </div>
+                    </div>
+                    <div class="content1">
+                        <div class="form-container">
+                        <form method="POST" class="form-container-upper">
+                                <p>New Crop</p>
+
+                                {{ new_crop.hidden_tag() }}
+
+                                <div class="form-row">
+                                    {{ new_crop.crop_name.label }}
+                                    {{ new_crop.crop_name }}
+                                </div>
+                                <div class="form-row">
+                                    {{ new_crop.sow_date.label }}
+                                    {{ new_crop.sow_date }}
+                                </div>
+
+                                <div class="form-row center">
+                                    {{ new_crop.submit() }}
+                                </div>
+
+                        </form>
+                    </div>
+                        <div>
+                        <img src="{{url_for('static', filename='draw1.svg')}}">
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+    {% endblock %}
+
+
+
+{% endblock %}

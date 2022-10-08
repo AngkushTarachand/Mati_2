@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='homepage.css')}}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <div class="navbar-grid">
+            <div class="nav-logo">
+                <img src="{{url_for('static', filename='logo.png')}}">
+                <p>Mati</p>
+            </div>
+            <div class="nav-items">
+                <a><p>Home</p></a>
+                <a href="{{ url_for('dashboard_page')}}"><p>Dashboard</p></a>
+                <a href="#AboutUs"><p>Our Story </p></a>
+                <a href="#Features"><p>Features</p></a>
+                <a href="#ContactUs"><p>Contact us</p></a>
+                <a href="{{ url_for('register_page')}}"><p>Sign in</p></a>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <video autoplay muted loop id="myVideo">
+            <source src="{{url_for('static', filename='vid1.mp4')}}" type="video/mp4">
+        </video>
+    </div>
+    <div id="AboutUs" class="about-us">
+        <div class="container-banner">
+            <div class="container-banner-text"><p>About us</p></div>
+        </div>
+        <div class="about-us-inner">
+            <div class="about-us-sub">
+                <div class="about-us-logo">
+                    <img src="{{url_for('static', filename='logo.png')}}">
+                </div>
+                <div class="about-us-story">
+                    <p>
+                        MATI helps you to engage in eco-friendly
+                        farming. It provides all the necessary information for the optimisation
+                        of your crops. With the health conscious movement, one has now feel the need
+                        part of the food.
+                        <br>
+                        <br>
+                        <br>
+                        So get your earthy journey started with Mati;
+                        <br>
+                        <br>
+                        Mati: explore your earthy feeling
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Features" class="features">
+        <div class="container-banner">
+            <!--<img src="asq.jpg">-->
+            <div class="container-banner-text"><p>Features</p></div>
+        </div>
+        <div class="features-inner">
+            <div class="features-sub">
+                <div class="feature-container">
+                    <div class="feature-logo"><i class='bx bxs-calendar'></i></div>
+                    <div class="feature-title">Interactive Calendar</div>
+                    <div class="feature-description">
+                        The calendar will provide the essential details
+                        to grow the vegetable at the right time and benefit
+                        from abundant harvest without going with climatic
+                        setback
+                    </div>
+                </div>
+                <div class="feature-container">
+                    <div class="feature-logo"> <i class='bx bx-list-ul' ></i> </div>
+                    <div class="feature-title"> Optimised Advices </div>
+                    <div class="feature-description">
+                    Despite being a small island, Mauritius have 3 major
+                    microclimate which gives year-around growth of certain
+                    vegetable and fruits.
+                </div>
+            </div>
+                <div class="feature-container">
+                    <div class="feature-logo"><i class='bx bx-book-content' ></i></div>
+                    <div class="feature-title"> Exclusive content </div>
+                    <div class="feature-description">
+                        On a weekly basis, get posts and podcast that will inspire,
+                        help and encourage you to become a better and responsible
+                        vegetable and fruit producer with ecological advices
+                    </div>
+                </div>
+                <div class="feature-container">
+                <div class="feature-logo"> <i class='bx bxs-group' ></i> </div>
+                <div class="feature-title"> Community help </div>
+                <div class="feature-description">
+                    We are currently working on the building a community that
+                    inter-help each other with the gardening works in order to
+                    build the social fabrics with the neighbourhood.
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ContactUs" class="contact-us">
+        <div class="container-banner">
+            <div class="container-banner-text"><p>Contact us</p></div>
+        </div>
+        <div class="contact-us-inner">
+            <div class="contact-us-container">
+                <form method="POST">
+                    {{ contact_form.hidden_tag() }}
+                    <div class="form-row">
+                        {{ contact_form.name.label }}
+                    {{ contact_form.name }}
+                    </div>
+
+                    <div class="form-row">
+                    {{ contact_form.contact_address.label }}
+                    {{ contact_form.contact_address }}
+                    </div>
+
+                    <div class="form-row">
+                    {{ contact_form.message.label }}
+                    {{ contact_form.message }}
+                    </div>
+
+                    <div class="form-row">
+                    {{ contact_form.send }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="WidePage">
+            <div class="WidePageInner">
+                <div class="WidePageContent1">
+                    <img src="{{url_for('static', filename='tree.svg')}}">
+                </div>
+                <div class="WidePageContent2">
+                    <div class="info-1">
+                        <div class="info_1_sub ">
+
+                            <p>About us </p>
+                                <p><a>Home</a></p>
+                                <p><a>Our Story</a></p>
+                                <p><a>Our Features</a></p>
+                                <p><a>Contact us</a></p>
+                                <p><a href="{{ url_for('dashboard_page')}}">Dashboard</a></p>
+
+                        </div>
+                        <div class="info_1_sub">
+                            <form>
+                                <p>
+                                    Subscribe for more freshly brewed content
+                                    about gardening.
+                                </p>
+                            </form>
+                        </div>
+                        <div class="info_1_sub">
+                            <p>Follow us</p>
+                            <div class="FollowUs">
+                                <p><a><i class='bx bxl-facebook'></i></a></p>
+                                <p><a><i class='bx bxl-instagram'></i></a></p>
+                                <p><a><i class='bx bxl-twitter'></i></a></p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="info-2">
+                        <div class="footerWidePage">
+                            <div>
+                                <p>&copy; 2022 Mati </p>
+                            </div>
+                            <div>
+                                <p>Based in Mauritius</p>
+                            </div>
+                            <div>
+                                <p><a>Terms and conditions</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

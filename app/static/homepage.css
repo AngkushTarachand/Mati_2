@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+*{
+    font-family: 'Fjalla One', sans-serif;
+}
+body{
+    margin: 0 ;
+    padding: 0 ;
+}
+
+nav{
+    height: 3rem;
+    width: 100%;
+/*    background: red;*/
+    position: fixed;
+    /* background: blue;*/
+   background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+/*  border: 3px solid #f1f1f1;*/
+/*  position: absolute;*/
+/*  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  z-index: 2;
+  /*width: 80%;
+  padding: 20px;*/
+  text-align: center;
+
+}
+
+.navbar-grid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 1fr;
+/*    background: red;*/
+}
+.nav-logo{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+/*    background: red;*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-logo img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.nav-items{
+    grid-row : 1 / 2;
+    grid-column: 3 / 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+#myVideo {
+  max-width: 100%;
+  max-height: 100%;
+}
+.features{
+    height: 100vh;
+    background: #FFD4B2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.container-banner{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-image: url("harvest.png");
+    background-size: cover;
+}
+.container-banner-text{
+    z-index: 10;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    color: white;
+    padding: 40px;
+}
+.container-banner-text p{
+    background:  #FFD4B2;
+    border-radius: 60px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.features-inner{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFD4B2;
+}
+.features-sub{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature-container{
+    width: 300px;
+    height: 290px;
+    margin: 20px;
+}
+.feature-logo{
+    font-size: 72px;
+    display: flex;
+    justify-content: center;
+    align-align: center;
+    padding: 10px;
+}
+.feature-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.feature-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+.about-us, .contact-us{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #FFD4B2;
+}
+.about-us-inner, .contact-us-inner{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-us-sub{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: none;
+}
+.about-us-logo{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-us-logo img{
+    height: 21rem;
+    width: 21rem;
+}
+.about-us-story{
+    height: 100%;
+    width: 40%;
+}
+.footer{
+    height: 100vh;
+    width: 100%;
+
+    padding: 0;
+    position: fixed;
+}
+.WidePage{
+    background: #FFD4B2;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    display: block;
+    z-index: 50;
+}
+.WidePageInner{
+/*    background: blue;*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.WidePageContent1{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.WidePageContent1 img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    z-index: 100;
+}
+.WidePageContent2{
+    padding: 10px;
+    height: 97%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.info-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info-2{
+    display: flex;
+    self-justify: center;!important
+    self-align: flex-end;!important
+}
+.footerWidePage{
+    display: flex;
+    justify-content : space-around;
+    align-items: flex;end
+}
+.FollowUs{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+.info_1_sub{
+    width: 60%;
+    height: auto;
+
+}
+.pos{
+    display: flex;
+    justify-content: center;
+}
+.info_1_sub p{
+    text-align: center;
+}
+.ul-style{
+    list-style: none;
+    text-align: center;
+    list-style-position: inside;
+
+}
+.about-us-story{
+    text-align: center;
+    line-height: 40px;
+     height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-us-container{
+    height: 100%;
+    width: 80%;px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+}
+form{
+    height: 100%;
+    width: 100%;
+}
+.form-row{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+textarea#message{
+    height: 100px;
+    width: 60%;
+    background: none;
+    border: 1px solid black;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+input#name, input#contact_address{
+    background: none;
+    border: 1px solid black;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+input#send{
+        width: 150px;
+    background-color: #2f1501;
+    border: none;
+    outline: none;
+    height: 49px;
+    border-radius: 49px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+

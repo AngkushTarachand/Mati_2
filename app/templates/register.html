@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in</title>
+</head>
+<body>
+
+        <h1> New here, register </h1>
+
+        <form method="POST">
+            {{ register_form.hidden_tag() }}
+
+                <br>
+            {{ register_form.first_name.label }}
+            {{ register_form.first_name(size=32) }}
+                <br>
+            {{ register_form.last_name.label }}
+            {{ register_form.last_name(size=32) }}
+                <br>
+            {{ register_form.email_address.label }}
+            {{ register_form.email_address(size=32) }}
+                <br>
+            {{ register_form.password.label }}
+            {{ register_form.password(size=32) }}
+                <br>
+            {{ register_form.confirm_password.label }}
+            {{ register_form.confirm_password(size=32) }}
+                <br>
+            {{ register_form.submit() }}
+        </form>
+        <br>
+        <br>
+
+</body>
+</html>

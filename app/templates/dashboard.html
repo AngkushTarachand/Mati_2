@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="viewport" content="width-device=width, initial-scale=1">-->
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css')}}">
+    {%  block style %}{% endblock %}
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<!--{% block body %}-->
+    <div class="sidebar ">
+        <div class="logo-details">
+            <i class='bx bxs-leaf'></i>
+            <span class="logo_name"> Mati </span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="{{ url_for('homepage')}}">
+                    <i class='bx bxs-home'></i>
+                    <span class="link-name">Home</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#"> Home </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-horizontal'></i>
+                    <span class="link-name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#"> Dashboard </a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon_link">
+                    <a href="#">
+                        <i class='bx bxs-collection'></i>
+                        <span class="link-name">Category</span>
+                    </a>
+                    <i class='bx bx-caret-down'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#"> Category </a></li>
+                    <li><a href="#"> Vegetables </a></li>
+                    <li><a href="#"> Fruits </a></li>
+                    <li><a href="#"> Flower </a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="icon_link">
+                    <a href="{{ url_for('harvest_page')}}">
+                        <i class='bx bxs-collection'></i>
+                        <span class="link-name">Harvest</span>
+                    </a>
+                    <i class='bx bx-caret-down'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#"> Vegetables </a></li>
+                    <li><a href="#"> Potato </a></li>
+                    <li><a href="#"> Tomato </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-analyse' ></i>
+                    <span class="link-name">Analytics</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#"> Analytics </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-news' ></i>
+                    <span class="link-name">Post</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#"> Post </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog' ></i>
+                    <span class="link-name">Setting</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#"> Setting </a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="logo1.png" alt="#">
+                    </div>
+
+                    <div class="name-job">
+                        <div class="profile-name">User 1</div>
+                        <div class="job">Producer</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">
+                Drop Down Sidebar
+            </span>
+        </div>
+        <div class="main-1">
+            {% block section %}
+
+            {% endblock %}
+        </div>
+    </section>
+
+
+
+<!--Font Awesome-->
+<!--<script src="https://kit.fontawesome.com/e9a3085f17.js" crossorigin="anonymous"></script>-->
+<script>
+    console.log("Hello");
+    let arrow = document.querySelectorAll(".bx-caret-down");
+    console.log(arrow);
+
+    for (var i = 0; i < arrow.length; i++){
+        arrow[i].addEventListener("click", (e)=>{
+        let arrowParent = e.target.parentElement.parentElement;
+        console.log(arrowParent);
+        arrowParent.classList.toggle("showMenu");
+        });
+    }
+
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu")
+    console.log(sidebar, sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+    });
+</script>
+<!--{% endblock %}-->
+</body>
+</html>
