@@ -10,11 +10,9 @@ body{
 nav{
     height: 3rem;
     width: 100%;
-/*    background: red;*/
     position: fixed;
-    /* background: blue;*/
-   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+   background-color: rgb(184,199,115); /* Fallback color */
+  background-color: rgba(184,199,115, 0.4); /* Black w/opacity/see-through */
   color: white;
   font-weight: bold;
 /*  border: 3px solid #f1f1f1;*/
@@ -35,12 +33,10 @@ nav{
     display: grid;
     grid-template-columns: 1fr 2fr 3fr;
     grid-template-rows: 1fr;
-/*    background: red;*/
 }
 .nav-logo{
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-/*    background: red;*/
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -63,7 +59,7 @@ nav{
 }
 .features{
     height: 100vh;
-    background: #FFD4B2;
+    background: #a4b661;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -91,7 +87,7 @@ nav{
     padding: 40px;
 }
 .container-banner-text p{
-    background:  #FFD4B2;
+    background:  #a4b661;
     border-radius: 60px;
     padding: 10px;
     border: 1px solid black;
@@ -102,7 +98,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #FFD4B2;
+    background: #a4b661;
 }
 .features-sub{
     width: 100%;
@@ -142,7 +138,7 @@ nav{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background: #FFD4B2;
+    background:#a4b661;
 }
 .about-us-inner, .contact-us-inner{
     width: 100%;
@@ -182,7 +178,7 @@ nav{
     position: fixed;
 }
 .WidePage{
-    background: #FFD4B2;
+    background: #a4b661;
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
@@ -192,7 +188,6 @@ nav{
     z-index: 50;
 }
 .WidePageInner{
-/*    background: blue;*/
     width: 100%;
     height: 100%;
     display: flex;

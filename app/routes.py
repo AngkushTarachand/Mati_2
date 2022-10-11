@@ -1,7 +1,7 @@
 import flask
-from app import flask_app, db
+from app import flask_app
 from app.forms import RegisterForm, NewCrop, SignInForm, HarvestForm, ContactForm
-from app.models import Users, Harvests, Crops
+# from app.models import Users, Harvests, Crops
 from app.weather import TodayCondition
 # import flask_login
 
@@ -13,6 +13,9 @@ def homepage():
         name = contact_form.name.data
         email = contact_form.contact_address.data
         message = contact_form.message.data
+
+        return "Your message has been sent"
+
     return flask.render_template("homepage.html", contact_form=contact_form)
 
 
@@ -33,15 +36,15 @@ def dashboard_page():
                    sow_date]
         print(da_list)
 
-        crops = Crops(
-            crop_name=crop_name,
-            sow_date=sow_date,
-        )
+        # crops = Crops(
+        #     crop_name=crop_name,
+        #     sow_date=sow_date,
+        # )
+        #
+        # db.session.add(crops)
+        # db.session.commit()
 
-        db.session.add(crops)
-        db.session.commit()
-
-        return flask.redirect("/homepage")
+        return flask.redirect("/")
     else:
         print("Wrong outcome")
 
@@ -62,14 +65,17 @@ def harvest_page():
         quantity = harvest_form.quantity.data
         units = harvest_form.units.data
 
-        harvests = Harvests(
-            harvest_date=harvest_date,
-            quantity=quantity,
-            units=units,
-        )
+        print(harvest_date, quantity, units)
+        # harvests = Harvests(
+        #     harvest_date=harvest_date,
+        #     quantity=quantity,
+        #     units=units,
+        # )
+        #
+        # db.session.add(harvests)
+        # db.session.commit()
 
-        db.session.add(harvests)
-        db.session.commit()
+        return flask.redirect("/")
 
     return flask.render_template("harvest.html", harvest_form=harvest_form)
 
@@ -99,15 +105,15 @@ def register_page():
         if c_pwd == c_pwd:
             print("Under progress for confirm password")
 
-        users = Users(
-            first_name=f_name,
-            last_name=l_name,
-            email_address=email_address,
-            password=pwd
-        )
-
-        db.session.add(users)
-        db.session.commit()
+        # users = Users(
+        #     first_name=f_name,
+        #     last_name=l_name,
+        #     email_address=email_address,
+        #     password=pwd
+        # )
+        #
+        # db.session.add(users)
+        # db.session.commit()
 
         print("ADDING TO DATABASE")
 
